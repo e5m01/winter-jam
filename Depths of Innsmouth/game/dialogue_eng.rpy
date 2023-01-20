@@ -96,5 +96,53 @@
 #If yes, maybe, add sound of clue and:
 
 
-#If no:
+#Choice: Yes / No
+#If no, jump to label noclue
+#If yes, maybe, add SOUND of clue and:
+
+"You crouch down to search for anything interesting between folders, construction maps, and old paper."
+"Your hand picks out an old picture. It portrays a man, a woman and two children, posing behind the mansion."
+"The mansion looks very similar to the one you are in now. The man and woman are smiling, they look happy."
+"There's something about their looks that doesn't sit right with you, though. Theirs is a glazed look, and around their necks they wear pendants."
+"You bring the flashlight closer to the picture to try to get a better look. Those pendants seem to have the shape of a sea animal, like an octopus, or a squid."
+"They are wearing fine clothes, the kind that was in fashion no longer than 70 years ago."
+"You bring your gaze to the fabric box again, and one of the mansion's maps catches your eye. You reach out your hand, and bring it in front of the flashlight."
+#SOUND of paper
+"The map seems to accurately depict the floors of the manor. The attic, where you are standing, is the highest floor."
+"Below that is the study, a bathroom, and a couple of other rooms whose function you can't quite understand."
+"After that, the hallway seems to lead to the kitchens, and the bedrooms."
+"You wrinkle your forehead when you notice that the floors, in fact, are not finished."
+"There seems to be a basement. But what's more strange is that the access door to the basement seems to be located..."
+"... in one of the bedrooms, through a trap door."
+"You don't know why, but you start to feel the hair on your arms rise, and a shiver starts from the back of your neck, as if your survival instincts had noticed something you hadn't."
+"You sigh, and you're about to put everything back in place, when you spot a symbol next to the hatch drawing."
+"It's the same symbol you saw around the necks of the two landlords."
+"That detail sticks in your mind as you abandon the papers in the box, standing up."
+
+
+#jump to label noclue
+
+#label noclue:
+
 #Choice: "Library" or "Corridor"
+
+#if Corridor: jump to "Corridor" (or "Bedroom")
+
+"You walk down the hallway to the ground floor. You proceed down the corridor, and you seem to hear, from inside the manor, still the rustling of the branches outside."
+"Perhaps it is the sound of the floorboards under your weight. Or the wooden furniture, due to the dampness. Maybe there's someone...? Your friends...?"
+"You get a little dizzy, and as you go on, turning on the flashlight of your phone to see clearly, you begin to feel a strong headache gripping you."
+"You stop when you notice a light coming from one of the rooms. The door is open."
+"You walk in, observe the room. The bed is diagonal, like it had been moved. On the floor, where the bed was supposed to be, seems to be a trapdoor."
+"The trapdoor was fastened to the floor by a chain clamped around two metal circles fused with the wooden boards. That chain is now unraveled."
+"Something inside you is drawn by the curiosity of seeing what's underneath. The other part of you, on the other hand, has the impression that the corners of the walls are shrinking against themselves, that the room is being sucked in by that same trapdoor."
+"The headache gets worse."
+"It's your choice, but something tells you that if you go down the trapdoor now, you won't be able to come back."
+
+
+#Choice: "Go down" or "Don't go down"
+#If "Don't go down":
+#Choice: "Attic" or "Library"
+#If "Go down", jump to "Ocean Cave"
+
+
+#label "Ocean Cave":

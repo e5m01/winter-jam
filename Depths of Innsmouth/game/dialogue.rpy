@@ -82,8 +82,50 @@
 "Vuoi dare un'occhiata?"
 
 #Choice: Yes / No
-#If yes, maybe, add sound of clue and:
+#If no, jump to label noclue
+#If yes, maybe, add SOUND of clue and:
 
+"Ti accovacci per cercare qualcosa di interessante tra le cartelle, le mappe edili e i fogli ingialliti."
+"La tua mano pesca una vecchia foto. Raffigura un uomo, una donna e due bambini, in posa dietro il maniero."
+"Il maniero sembra molto simile a quello in cui ti trovi adesso. L'uomo e la donna sorridono, sembrano felici."
+"C'è qualcosa nei loro sguardi che non ti convince, però. Il loro è uno sguardo vitreo, e al collo indossano dei pendenti."
+"Avvicini la torcia alla foto per cercare di vedere meglio. Quei pendenti sembrano avere la forma di un animale marino, come una piovra, o un polipo."
+"Indossano abiti eleganti, di quelli in voga non più di 70 anni fa."
+"Porti di nuovo lo sguardo sulla scatola di tessuto, e una delle mappe del maniero attira la tua attenzione. Allunghi la mano, e la porti davanti alla luce della torcia."
+#SOUND of paper
+"La mappa sembra raffigurare accuratamente i piani del maniero. L'attico, dove ti trovi tu, è il piano più in alto."
+"Sotto si trovano lo studio, un bagno, e un paio di altre stanze di cui non riesci bene a comprendere la funzione."
+"Dopodiché il corridoio sembra portare alle cucine, e alle camere da letto."
+"Corrughi la fronte quando noti che i piani, in realtà, non sono finiti."
+"Sembra esserci un seminterrato. Ma la cosa più strana è che la porta d'accesso del seminterrato sembra trovarsi..."
+"... in una delle camere da letto, attraverso una botola."
+"Non sai perché, ma inizi a sentire i peli delle braccia sollevarsi, e un brivido partire dalla tua nuca, come se il tuo istinto di sopravvivenza avesse notato qualcosa che tu non hai notato."
+"Sospiri, e stai per rimettere tutto a posto, quando vedi un simbolo vicino al disegno della botola."
+"E' lo stesso simbolo che hai visto al collo dei due proprietari di casa."
+"Quel dettaglio ti rimane in testa mentre abbandoni i documenti nella scatola, alzandoti."
 
-#If no:
+#jump to label noclue
+
+#label noclue:
+
 #Choice: "Library" or "Corridor"
+
+#if Corridor: jump to "Corridor" (or "Bedroom")
+
+"Ti incammini verso il corridoio del piano terra. Prosegui lungo il corridoio, e ti sembra di sentire, da dentro il maniero, ancora il cigolio dei rami all'esterno."
+"Forse è il suono delle assi del pavimento sotto il tuo peso. O dei mobili di legno, per l'umidità. Forse c'è qualcuno...? I tuoi amici..?"
+"Ti gira un po' la testa, e man mano che prosegui, accendendo la torcia del tuo cellulare per vedere con chiarezza, inizi a percepire un forte mal di testa che ti afferra."
+"Ti fermi quando ti accorgi di una luce provenire da una delle camere. La porta è aperta."
+"Accedi, osservi la stanza. Il letto è in diagonale, come se fosse stato spostato. A terra, nella posizione dove esso si trovava, sembra esserci una botola."
+"La botola era fissa al pavimento da una catena serrata attorno a due cerchi di metallo fusi con le assi di legno. Quella catena, ora, è sbrogliata."
+"Qualcosa dentro di te è attratto dalla curiosità di vedere cosa c'è sotto. L'altra parte di te, invece, ha l'impressione che gli angoli delle pareti si stiano rattrappendo contro se stesse, che la stanza stia venendo risucchiata da quella stessa botola."
+"Il mal di testa è ancora più forte."
+"E' tua la scelta, ma qualcosa ti dice che se scenderai nella botola, non potrai più tornare indietro."
+
+#Choice: "Go down" or "Don't go down"
+#If "Don't go down":
+#Choice: "Attic" or "Library"
+#If "Go down", jump to "Ocean Cave"
+
+
+#label "Ocean Cave":
