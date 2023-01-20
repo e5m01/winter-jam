@@ -50,7 +50,7 @@
 "Sembrano dei simboli occulti che vanno attorno a un cerchio, e in basso un titolo:"
 "T'tka Halot."
 "Lo apri. Il libro contiene una serie di illustrazioni fatte a mano, così antiche che l'inchiostro, prima nero, ha cambiato colore insieme all'ingiallimento delle pagine."
-"Non comprendi niente di ciò che vi è scritto, ma sembrano delle sorta di canti."
+"Non comprendi niente di ciò che vi è scritto, ma sembrano una sorta di canti."
 "Vuoi prendere il T'tka Halot?"
 
 #Choice: Yes / No
@@ -61,3 +61,29 @@
 
 
 #if Attic: jump to "Attic"
+
+
+"Salendo le scale che portano verso l'attico, ti rendi conto che la luce non raggiunge il piano superiore."
+"Cerchi di aiutarti con la torcia del cellulare."
+
+#if possible, EFFECT of flash
+
+#SOUND of stairs creaking (maybe same sound as the woodboard)
+"Le scale scricchiolano sotto i tuoi piedi, illuminate dalla luce tagliente e intensa della torcia."
+"Esse ti portano a un breve pianerottolo, e davanti a te si trova una porta."
+#SOUND of door handle creaking while opening
+"Cerchi di aprirla. La maniglia di ottone cigola, mentre ti asseconda."
+"Davanti a te si trova una stanza polverosa, ricolma di cianfrusaglie che, sotto la luce fredda, sembrano assumere forme distorte e allungate, fondendosi con la loro stessa ombra..."
+"... al punto che non sei più sicuro di dove finisce la sagoma di un tappeto persiano arrotolato..."
+"... e dove inizia l'angolo di una vecchia tenda, posta vicino alla finestra."
+"Non c'è traccia dei tuoi amici qui. Né di qualcosa di utile. Ma forse puoi trovare delle informazioni su cosa sia questo maniero..."
+"Ti guardi attorno. Vecchie fotografie, libri ammuffiti, specchi coperti da drappi ingialliti."
+"Una scatola di stoffa, tra le altre cose, sembra contenere una serie di documenti."
+"Vuoi dare un'occhiata?"
+
+#Choice: Yes / No
+#If yes, maybe, add sound of clue and:
+
+
+#If no:
+#Choice: "Library" or "Corridor"
