@@ -129,3 +129,118 @@
 
 
 #label "Ocean Cave":
+
+
+"Ti accovacci verso la botola, afferri la catena e la sollevi per aprire la botola."
+"Con un sinistro cigolio, il quadrato di legno si solleva sul suo perno, rivelando delle scale ripide che affondano nel buio."
+"Immergi le gambe in quel vuoto, e grazie alla luce del tuo smartphone riesci a vedere dove poggiano i tuoi piedi."
+"Afferri un corrimano di metallo per aiutarti a scendere le scale, e a un certo punto le suole delle tue scarpe incontrano il cemento."
+"Un seminterrato quasi del tutto vuoto è ciò che la luce del tuo smartphone rivela. E in fondo al seminterrato, un'altra porta."
+"Il mal di testa sta diventando quasi insopportabile, e il tuo corpo rabbrividisce dal freddo."
+"Dev'esserci qualcosa là sotto, ma non sapresti dire perché ne sei convinto."
+"Avanzi, e dopo la porta vedi altre scale, altre discese, stavolta scavate direttamente nella pietra, in antichi solchi umidi e ricoperti di muffa."
+"Discendi in un tempo che ti sembra infinito, e hai come la sensazione che più ti addentri in quella sorta di caverna, più le leggi del tempo e dello spazio si dilatano."
+"Le scale finiscono. Davanti a te si aprono una serie di cunicoli, illuminati fiocamente da alcune torce."
+"Riesci a sentire, in fondo, delle voci che recitano dei canti. La testa inizia a girarti. In qualche modo, riesci ancora a mantenere l'equilibrio."
+"Ti dirigi nella direzione dei canti, e la scena che si staglia davanti a te è agghiacciante."
+"Delle persone avvolte in cappe si trovano in cerchio davanti a un simbolo inscritto sul pavimento. Hanno dei tomi tra le mani, da cui leggono i versi che stanno recitando."
+"Ma la cosa che ti fa rabbrividire, è che da quel simbolo inscritto sul pavimento sembra affiorare una aura sinistra, che, in qualche modo, il tuo corpo riesce a percepire come profondamente pericolosa e malvagia."
+"E se il tuo sguardo ancora non ti tradisce, proprio lì nel perimetro del simbolo, iniziano ad affiorare dei tentacoli... dal pavimento."
+"Svelto, cerchi di capire cosa dovresti fare."
+
+#if you have collected the sword, add:
+
+"Hai con te quella spada che hai trovato nello studio. Puoi colpire quei cultisti e fermare il rituale."
+
+#if you have collected the book, add:
+
+"Hai con te il libro chiamato 'T'tka Halot'. Puoi usarlo per unirti anche tu al rituale e schierarti dalla parte dei cultisti nella creazione di un nuovo mondo."
+"Oppure puoi usarlo per spezzare il rituale e ribaltare l'incantesimo, risucchiando i cultisti all'interno del simbolo di invocazione."
+
+#if you only have the sword, jump to "EndSword"
+#if you only have the book, jump to "EndBook"
+#if you have both sword and boook, jump to "BookNSword"
+#if you have nothing, jump to "BadEnding"
+
+        #label EndSword:
+
+"Vuoi usare la spada?"
+
+#if "No", then jump to "BadEnding"
+#if "Yes", then jump to "UseSword"
+
+
+    #label "UseSword":
+
+"Velocemente, estrai la spada. Non sei sicuro di sapere come usarla, ma immagini di poterla semplicemente roteare per aria e colpire qualcuno per fermare il rituale."
+"E' quello che fai. Ti lanci verso uno dei cultisti e lo colpisci con la spada."
+#SOUND of sword
+"Riesci a colpirne uno, spezzando il coro. Dal portale si irradia un minaccioso raggio di luce rossa, e senti uno stridio lontano provenire da lì, quello che sembra appartenere a una creatura che non hai mai sentito prima."
+"I tentacoli si ritirano, e lentamente quel raggio di luce si assottiglia fino a sparire."
+"Sei riuscito a impedire il rituale, ma presto la gioia di aver salvato l'umanità viene sostituita da una sensazione affilata nei polmoni."
+"Uno dei cultisti ti ha pugnalato dietro la schiena. Senti le gambe deboli, e cadi sulle ginocchia."
+"Ti stendi, sentendoti girare la testa. Presto perderai i sensi, ma almeno lo farai con la consapevolezza che l'umanità è salva, almeno stavolta, grazie a te."
+
+#"The End" and credits
+
+        #label "EndBook":
+
+"Per cosa vuoi usare il libro?"
+
+#if "I don't want to", then jump to "BadEnding"
+#if "I want to break the ritual", then jump to "GoodEndingBook"
+#if "I want to join the cultists", then jump to "BadEndingBook"
+
+    #label "GoodEndingBook":
+
+"Tiri fuori il libro, e cerchi velocemente una formula che possa spezzare il rituale."
+"La trovi. Inizi a recitare i versi scritti sul tomo."
+"Dal portale si irradia un minaccioso raggio di luce rossa, e senti uno stridio lontano provenire da lì, quello che sembra appartenere a una creatura che non hai mai sentito prima."
+"I cultisti si voltano a guardarti, e cercano di fermarti, estraendo i loro pugnali. Ma prima che possano raggiungerti, iniziano a venire risucchiati nello stesso portale che hanno aperto."
+"Tra le urla dei cultisti, i tentacoli della creatura mostruosa si ritirano, e lentamente quel raggio di luce si assottiglia fino a sparire."
+"Sei riuscito a impedire il rituale. Tu, i tuoi amici, e tutta l'umanità siete salvi."
+"Felice, percorri il seguito della caverna fino a sbucarne fuori. La caverna sbocca sul mare, dandoti una vista sulle oscure profondità che si trovano sotto i tuoi piedi."
+"Per ora l'umanità è salva, e speri che lo rimanga ancora a lungo."
+
+#"The End" and credits
+
+        #label "BadEndingBook":
+
+"Vuoi fare parte della storia, sì. Della storia di come si è posto fine all'umanità."
+"Difficile sapere chi racconterà mai questa storia, forse lo stesso Azatoth."
+"Ma è ciò che vuoi. E quindi, tiri fuori il libro, lo sfogli, cerchi di riconoscere quei versi recitati dai cultisti."
+"E quando li trovi, ti affianchi a loro e anche tu canti per portare Cthulhu in questo piano."
+"Con il tuo aiuto, il canto dei cultisti diventa sempre più potente. Presto il portale sinistro si allarga per dare sempre più spazio a quella creatura che allarga i suoi tentacoli lungo il pavimento."
+"I tentacoli si accumulano, fino ad avere abbastanza spazio da far affiorare una mostruosa creatura, gigantesca, dalle sembianze marine."
+"La creatura, davanti ai tuoi occhi, emette uno stridio innaturale che ti fa rabbrividire di una strana esaltazione."
+"Inizi a sentire, in lontananza, il rumore del mare agitarsi, e dei tuoni che preannunciano maltempo."
+"I cultisti recitano un inno, si inginocchiano alla mostruosa creatura, e tu fai lo stesso."
+"Essa si trascina verso il mare, e tu alzi il volto per ammirarla."
+"Presto assisterai alla fine di tutto ciò che conosci. E non vedi l'ora."
+
+
+#"The End" and credits
+
+
+
+    #label "BookNSword":
+
+"Quale strumento vuoi usare?"
+
+#if "Sword", jump to "UseSword"
+#if "Book", jump to "UseBook"
+#if "Nothing", jump to "BadEnding"
+
+
+    #label BadEnding:
+
+"Inerme, osservi i cultisti compiere il rituale davanti ai tuoi occhi."
+"Il portale si dipana lentamente dal terreno della caverna, allargandosi, e una luce rossa colora le pareti di pietra."
+"I tentacoli si accumulano, fino ad avere abbastanza spazio da far affiorare una mostruosa creatura, gigantesca, dalle sembianze marine."
+"La creatura non ti nota, ma circondata dai cultisti emette uno stridio innaturale che ti fa accapponare la pelle."
+"Inizi a sentire, in lontananza, il rumore del mare agitarsi, e dei tuoni che preannunciano maltempo."
+"I cultisti recitano un inno, si inginocchiano alla mostruosa creatura, e mentre essa si trascina verso il mare, il tuo mal di testa ti impedisce di reagire."
+"Cadi in ginocchio, in un lamento."
+"Lentamente, perdi conoscenza, e dentro di te sai, che è finita. Non solo per te, ma per tutti noi."
+
+#"The End" and credits

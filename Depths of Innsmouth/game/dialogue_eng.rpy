@@ -146,3 +146,125 @@
 
 
 #label "Ocean Cave":
+
+"You crouch toward the trapdoor, grab the chain and lift it to open the hole."
+"With an ominous creak, the wooden square lifts up on its pivot, revealing steep stairs that sink into the darkness."
+"You dip your legs into that void, and thanks to the flash of your smartphone you can see where your feet rest."
+"You grab the metal handrail to help you down the stairs, and at one point the soles of your shoes meet the concrete."
+"An almost completely empty basement is what the light from your smartphone reveals. And at the bottom of the basement, another door."
+"The headache is becoming almost unbearable, and your body shivers from the cold."
+"There must be something down there, but you can't tell why you think so."
+"You move forward, and after the door you see more stairs, more downhill, this time dug directly into the stone, into ancient damp, mold-covered furrows."
+"You descend in a time that seems infinite, and you have the feeling that the deeper you go into that sort of cave, the more the laws of time and space are dilating."
+"The stairs end. A series of tunnels open before you, dimly lit by a few lanterns."
+"You can hear, at the bottom, voices reciting chants. Your head begins to spin. Somehow, you still manage to keep your balance."
+"You head in the direction of the chants, and the scene that unfolds before you is chilling."
+"People wrapped in hoods stand in a circle before a symbol inscribed on the floor. They have tomes in their hands, from which they read the verses they are reciting."
+"But the thing that makes you shudder is that from that symbol inscribed on the floor there seems to emerge a sinister aura, which, somehow, your body manages to perceive as deeply dangerous and evil."
+"And if your gaze doesn't betray you yet, right there in the perimeter of the symbol, tentacles begin to emerge -- from the floor."
+"Quick, try to figure out what you should do."
+
+
+#if you have collected the sword, add:
+
+"You carry that sword you found in the study. You can hit those cultists and stop the ritual."
+
+#if you have collected the book, add:
+
+"You carry the book called 'T'tka Halot.' You can use it to join the ritual as well and side with the cultists in creating a new world."
+"Or you can use it to break the ritual and reverse the spell, sucking the cultists inside the summoning symbol."
+
+#if you only have the sword, jump to "EndSword"
+#if you only have the book, jump to "EndBook"
+#if you have both sword and boook, jump to "BookNSword"
+#if you have nothing, jump to "BadEnding"
+
+        #label EndSword:
+
+"Do you want to use the sword?"
+
+
+#if "No," then jump to "BadEnding"
+#if "Yes," then jump to "UseSword"
+
+
+    #label "UseSword":
+
+"Quickly, you draw your sword. You're not sure how to use it, but you imagine you can just twirl it in the air and strike someone with it to end the ritual."
+"That's what you do. You throw yourself at one of the cultists and hit him with the sword."
+#SOUND of sword
+"You manage to hit one of them, breaking the chorus. An ominous beam of red light radiates from the portal, and you hear a distant screeching coming from there, what sounds like it belongs to a creature you've never heard before."
+"The tentacles retreat, and slowly that beam of light thins until it disappears."
+"You managed to prevent the ritual, but soon the joy of having saved humanity is replaced by a sharp feeling in your lungs."
+"One of the cultists stabbed you in the back. You feel your legs weak, and you fall to your knees."
+"You lie down, feeling your head spin. Soon you lose consciousness, but at least you do so with the knowledge that humanity is safe, at least this time, thanks to you."
+
+#"The End" and credits
+
+
+        #label "EndBook":
+
+"What do you want to use the book for?"
+
+#if "I don't want to do anything", then jump to "BadEnding"
+#if "I want to break the ritual," then jump to "GoodEndingBook"
+#if "I want to join the cultists," then jump to "BadEndingBook"
+
+    #label "GoodEndingBook":
+
+" You pull out the book, and quickly look for a spell that can break the ritual."
+"You find it. You start reciting the verses written on the tome."
+"An ominous beam of red light radiates from the portal, and you hear a distant screeching coming from there, what sounds like it belongs to a creature you've never heard before."
+"The cultists turn to look at you, and try to stop you, drawing their daggers. But before they can reach you, they start getting sucked into the same portal they've opened."
+"Amid the screams of the cultists, the tentacles of the monstrous creature retreat, and slowly that ray of light thins until it disappears."
+"You managed to prevent the ritual. You, your friends, and all humanity are saved."
+"Happy, you walk along the trail of the cavern until you emerge from it. The cavern flows out into the sea, giving you a view of the dark depths beneath your feet."
+"For now humanity is safe, and you hope it will remain so for a long time to come."
+
+#"The End" and credits
+
+
+
+
+        #label "BadEndingBook":
+
+"You want to be part of the story, yes. The story of how humanity was ended."
+"Hard to know who will ever tell that story, maybe Azatoth themselves."
+"But that's what you want. And so, you pull out the book, flip through it, try to recognize those verses that the cultists are reciting."
+"And when you find them, you stand beside them and also chant to bring Cthulhu into this plane."
+"With your help, the cultists' chanting becomes more and more powerful. Soon the ominous portal widens to give more and more space to that creature that spreads its tentacles along the floor."
+"The tentacles pile up, until there is enough space for a monstrous, gigantic, sea-like creature to emerge."
+"The creature, right before your eyes, emits an unnatural screech that makes you shudder with an odd exaltation."
+"You begin to hear, in the distance, the sound of the sea churning, and of thunder heralding bad weather."
+"The cultists recite a hymn, kneel to the monstrous creature, and you do the same."
+"It drags itself toward the sea, and you raise your face to admire it."
+"Soon you will witness the end of all that you know. And you look forward to it."
+
+
+#"The End" and credits
+
+
+
+
+
+    #label "BookNSword":
+
+"What tool do you want to use?"
+
+#if "Sword," jump to "UseSword"
+#if "Book", jump to "UseBook"
+#if "Nothing", jump to "BadEnding"
+
+
+    #label BadEnding:
+
+"Helpless, you watch the cultists perform the ritual before your eyes."
+"The portal slowly unravels from the cavern floor, widening, and a red light colors the stone walls."
+"The tentacles build up, until there is enough space for a monstrous, gigantic, sea-like creature to emerge."
+"The creature does not notice you, but surrounded by the cultists it emits an unnatural screech that makes your skin crawl."
+"You begin to hear, in the distance, the sound of the sea churning, and thunder heralding bad weather."
+"The cultists recite a hymn, kneel to the monstrous creature, and as it drags itself toward the sea, your headache prevents you from reacting."
+"You fall to your knees, in a whimper."
+"Slowly, you lose consciousness, and deep inside you know, that it's over. Not only for you, but for all of us."
+
+#"The End" and credits
