@@ -320,6 +320,8 @@ label Cave:
         jump End_Book
     if Sword_taken is True and Ttka_Halot_taken is True:
         jump End_SwordAndBook
+    if Sword_taken is False and Ttka_Halot_taken is False:
+        jump BadEnding
 
 label End_Sword:
     "Do you want to use the sword?"
