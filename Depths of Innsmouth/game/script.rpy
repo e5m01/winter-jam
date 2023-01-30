@@ -242,6 +242,10 @@ label Corridor:
     "Perhaps it is the sound of the floorboards under your weight. Or the wooden furniture, due to the dampness. Maybe there's someone...? Your friends...?"
     "You get a little dizzy, and as you go on, turning on the flashlight of your phone to see clearly, you begin to feel a strong headache gripping you."
     "You stop when you notice a light coming from one of the rooms. The door is open."
+    
+    scene bg-bedroom with fade
+    $ visited_Bedroom = True
+    
     "You walk in, observe the room. The bed is diagonal, like it had been moved. On the floor, where the bed was supposed to be, seems to be a trapdoor."
     "The trapdoor was fastened to the floor by a chain clamped around two metal circles fused with the wooden boards. That chain is now unraveled."
     "Something inside you is drawn by the curiosity of seeing what's underneath. The other part of you, on the other hand, has the impression that the corners of the walls are shrinking against themselves, that the room is being sucked in by that same trapdoor."
