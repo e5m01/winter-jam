@@ -26,12 +26,13 @@
 #SOUND of big door creaking in opening
 #BACKGROUND shift to "Entrance Hall", but no label jump.
 
-"Nonostante le luci accese, la tua prima impressione è che questo luogo sia stato abbandonato a sé stesso."
-"L'aria di questo luogo sembra più rarefatta- come una nebbia altamente improbabile. Potrebbe essere polvere, o cenere."
-"Ti trovi in quello che sembrerebbe essere una grande entrance hall, con delle scale che portano verso l'alto."
-"Una delle stanze al piano di sopra sembra aperta, forse uno studio di qualche genere."
-"L'altra parte della scala, invece, porta direttamente all'attico."
-"Questo piano sembra portare a un lungo corridoio, difficile sapere dove potrebbe farti finire."
+"Despite the bright lights, your first impression is that this place has been left to itself."
+"The air in this place seems thinner- like a highly improbable mist. It could be dust, or ash."
+"You are standing in what would appear to be a large entrance hall, with stairs leading upward."
+"One of the rooms upstairs appears to be open, perhaps a study of some kind."
+"The other part of the staircase, however, leads directly to the attic."
+"This floor seems to lead to a long hallway, hard to know where it might lead you."
+
 
 #Choice: "Library" "Attic" "Corridor"
 
