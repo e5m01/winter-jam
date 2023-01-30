@@ -120,7 +120,7 @@ define config.window_hide_transition = Dissolve(.2)
 ## Controls the default text speed. The default, 0, is infinite, while any other
 ## number is the number of characters per second to type out.
 
-default preferences.text_cps = 0
+default preferences.text_cps = 40
 
 
 ## The default auto-forward delay. Larger numbers lead to longer waits, with 0
@@ -150,7 +150,8 @@ define config.save_directory = "DepthsofInnsmouth-1674227675"
 ##
 ## The icon displayed on the taskbar or dock.
 
-define config.window_icon = "gui/DoI_WindowIcon.png"
+define config.window_icon = "icon.png"
+#define config.window_icon = "icon.ico"
 
 
 ## Build configuration #########################################################
