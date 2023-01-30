@@ -1,40 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 39, in script
-    play sound s_DoorOpening
-  File "renpy/common/000statements.rpy", line 300, in execute_play_sound
-    renpy.sound.play(_audio_eval(p["file"]),
-  File "renpy/common/000statements.rpy", line 32, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
-  File "game/script.rpy", line 39, in <module>
-    play sound s_DoorOpening
-NameError: name 's_DoorOpening' is not defined
+  File "game/script.rpy", line 405, in script
+    scene bg-black fadein 2
+Exception: Image 'bg-black' does not accept attributes 'fadein 2'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 39, in script
-    play sound s_DoorOpening
-  File "D:\GameDev\RenPy\renpy-8.0.3-sdk\renpy\ast.py", line 2232, in execute
-    self.call("execute")
-  File "D:\GameDev\RenPy\renpy-8.0.3-sdk\renpy\ast.py", line 2220, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "D:\GameDev\RenPy\renpy-8.0.3-sdk\renpy\statements.py", line 281, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 300, in execute_play_sound
-    renpy.sound.play(_audio_eval(p["file"]),
-  File "renpy/common/000statements.rpy", line 32, in _audio_eval
-    return eval(expr, locals=store.audio.__dict__)
-  File "D:\GameDev\RenPy\renpy-8.0.3-sdk\renpy\python.py", line 1092, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "D:\GameDev\RenPy\renpy-8.0.3-sdk\renpy\python.py", line 1085, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 39, in <module>
-    play sound s_DoorOpening
-NameError: name 's_DoorOpening' is not defined
+  File "game/script.rpy", line 405, in script
+    scene bg-black fadein 2
+  File "D:\GameDev\RenPy\renpy-8.0.3-sdk\renpy\ast.py", line 1542, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "D:\GameDev\RenPy\renpy-8.0.3-sdk\renpy\ast.py", line 1371, in show_imspec
+    renpy.config.show(name,
+  File "D:\GameDev\RenPy\renpy-8.0.3-sdk\renpy\exports.py", line 686, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "D:\GameDev\RenPy\renpy-8.0.3-sdk\renpy\display\image.py", line 414, in find_target
+    self.target = target._duplicate(a)
+  File "D:\GameDev\RenPy\renpy-8.0.3-sdk\renpy\display\core.py", line 397, in _duplicate
+    args.extraneous()
+  File "D:\GameDev\RenPy\renpy-8.0.3-sdk\renpy\display\core.py", line 265, in extraneous
+    raise Exception("Image '{}' does not accept attributes '{}'.".format(
+Exception: Image 'bg-black' does not accept attributes 'fadein 2'.
 
 Windows-10-10.0.19044 AMD64
 Ren'Py 8.0.3.22090809
 Depths of Innsmouth 1.0
-Fri Jan 20 16:47:42 2023
+Sun Jan 29 23:58:22 2023

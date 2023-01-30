@@ -2,29 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 88: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "Bedroom"
-             ^
+File "game/script.rpy", line 151: end of line expected.
+    scene bg-black with fade 2.0
+                             ^
 
-File "game/script.rpy", line 136: expected statement.
-    Sword_taken = True
-                ^
+File "game/script.rpy", line 156: end of line expected.
+    scene bg-black with fade 2.0
+                             ^
 
-File "game/script.rpy", line 140: expected statement.
-    Sword_taken = False
-                ^
-
-File "game/script.rpy", line 145: expected statement.
-    Ttka_Halot_taken = True
-                     ^
-
-File "game/script.rpy", line 149: expected statement.
-    Ttka_Halot_taken = False
-                     ^
-
-File "game/script.rpy", line 201: Line is followed by a block, despite not being a menu choice. Did you forget a colon at the end of the line?
-    "Faint from headache"
-                         ^
+File "game/script.rpy", line 162: end of line expected.
+    scene bg-black with fade 2.0
+                             ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Fri Jan 20 17:56:34 2023
+Sun Jan 29 23:22:51 2023
