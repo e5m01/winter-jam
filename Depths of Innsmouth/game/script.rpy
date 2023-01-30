@@ -280,7 +280,7 @@ label Cave:
     "People wrapped in hoods stand in a circle before a symbol inscribed on the floor. They have tomes in their hands, from which they read the verses they are reciting."
     "But the thing that makes you shudder is that from that symbol inscribed on the floor there seems to emerge a sinister aura, which, somehow, your body manages to perceive as deeply dangerous and evil."
     
-    play music "Depth of Innsmounth.mp3" fadein 2.0
+    play music "Depth of Innsmounth - Intense.mp3" fadein 2.0
     
     "And if your gaze doesn't betray you yet, right there in the perimeter of the symbol, tentacles begin to emerge -- from the floor."
     "Quick, try to figure out what you should do."
