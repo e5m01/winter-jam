@@ -3,8 +3,8 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-# Naming convenction:   
-#   c_ for Charater 
+# Naming convenction:
+#   c_ for Charater
 #   b_ for Backgrounds
 #   m_ for Music Tracks
 
@@ -24,7 +24,7 @@ define diss = Dissolve(0.5)
 
 # Game starts here.
 label start:
-    
+
     #jump RunCredits
     stop music fadeout 2
     pause 2.0
@@ -35,7 +35,7 @@ label start:
     play music "Audio - creepy leaves at night.wav" fadeout 5 fadein 10
     pause 1.0
     #play music "Depth of Innsmounth.mp3"
-    
+
     "You don't exactly know how you got here. There's a void in your head."
     "But you can still remember who you are, and what you're doing here."
     "You are a game developer at a very prominent game studio, and you used your savings to take a trip with your friends to England, where you live."
@@ -44,7 +44,7 @@ label start:
     "They let you know that Innsmouth is the fictional name of an American town in one of Lovecraft's stories."
     "You were passing through anyway and the sun was setting. So you decided that spending a night in Innsmouth would be thrilling."
     "But the rest, as soon as you crossed the border of that eerie little town ... is hazy, in your memories."
-    
+
     scene bg-mansion with fade
 
     "You gaze at the unsettling manor house looming before you. Thin spires reaching obliquely toward the sky, with tiles blackened as if burnt out by a fire."
@@ -54,7 +54,7 @@ label start:
     "A chill runs through your body. Where are the others? What has happened to them? There is no sign of them, and you begin to think that you should find shelter from the darkness."
     "So you make your way to the entrance of the manor house."
 
-    scene bg-black with fade 
+    scene bg-black with fade
 
     play sound "Audio - door handle.wav"
     pause 1.25
@@ -68,27 +68,27 @@ label EntranceHall:
     play music "Depth of Innsmounth.mp3" fadein 10
 
     scene bg-corridor with fade
-    
-    "Nonostante le luci accese, la tua prima impressione è che questo luogo sia stato abbandonato a sé stesso."
-    "L'aria di questo luogo sembra più rarefatta- come una nebbia altamente improbabile. Potrebbe essere polvere, o cenere."
-    "Ti trovi in quello che sembrerebbe essere una grande entrance hall, con delle scale che portano verso l'alto."
-    "Una delle stanze al piano di sopra sembra aperta, forse uno studio di qualche genere."
-    "L'altra parte della scala, invece, porta direttamente all'attico."
-    "Questo piano sembra portare a un lungo corridoio, difficile sapere dove potrebbe farti finire."
+
+    "Despite the bright lights, your first impression is that this place has been left to itself."
+    "The air in this place seems thinner- like a highly improbable mist. It could be dust, or ash."
+    "You are standing in what would appear to be a large entrance hall, with stairs leading upward."
+    "One of the rooms upstairs appears to be open, perhaps a study of some kind."
+    "The other part of the staircase, however, leads directly to the attic."
+    "This floor seems to lead to a long hallway, hard to know where it might lead you."
 
     menu:
         "Library":
-            scene bg-black with fade 
+            scene bg-black with fade
             pause 2.0
             jump Library
 
         "Attic":
-            scene bg-black with fade 
+            scene bg-black with fade
             pause 2.0
             jump Attic
 
         "Corridor":
-            scene bg-black with fade 
+            scene bg-black with fade
             pause 2.0
             jump Corridor
 
@@ -102,7 +102,7 @@ label Library:
     "It is impossible to decipher the decorations, for the table is almost entirely taken up by tomes haphazardly stacked on top of each other, yellowed papers, fountain pens and ink nibs."
     "The walls of the room are mostly taken up by ceiling-high bookcases with countless books and knick-knacks."
     "You look around, and your attention is caught by an artifact that, of all things, seems strange to find in a study."
-    
+
     if Sword_taken is False:
         play sound "Audio - blade stroking.wav"
         "It is a sword with rather ancient features, forged in a metal that seems alien to you and which, because of its color, you could perhaps trace back to copper."
@@ -123,7 +123,7 @@ label Library:
         "They look like occult symbols going around a circle, and at the bottom is the title:"
         "T'tka Halot."
 
-        play sound "Audio - pages shuffling.wav" fadein 5
+        play sound "Audio - pages shuffling.wav" fadein 2
         pause 3
 
         "You open it. The book contains a series of hand-made illustrations, so old that the ink, formerly black, has changed color along with the yellowing of the pages."
@@ -131,7 +131,7 @@ label Library:
 
         stop sound fadeout 2
         "Do you want to take the T'tka Halot?"
-        
+
         menu:
             "Yes":
                 $ Ttka_Halot_taken = True
@@ -140,7 +140,7 @@ label Library:
             "No":
                 $ Ttka_Halot_taken = False
 
-    
+
     "Where do you want to go next?"
     menu:
         "Attic":
@@ -156,7 +156,7 @@ label Library:
 
 label Attic:
     scene bg-attic with fade
-    
+
     if visited_Attic is False:
         $ visited_Attic = True
         "As you climb the stairs leading to the attic, you realize that the lights do not reach the upper floor."
@@ -191,9 +191,9 @@ label Attic:
                 jump Attic__clue
 
             "No":
-                $ Clue_taken = True
+                $ Clue_taken = False
                 jump Attic__no_clue
-    else: 
+    else:
         jump Attic__clue
 
 label Attic__clue:
@@ -220,7 +220,7 @@ label Attic__clue:
     "That detail sticks in your mind as you abandon the papers in the box, standing up."
     stop sound fadeout 2
     pause 0.5
-    
+
     jump Attic__no_clue
 
 label Attic__no_clue:
@@ -236,62 +236,79 @@ label Attic__no_clue:
 
 label Corridor:
     scene bg-corridor with fade
-    $ visited_Corridor = True
-
     "You walk down the hallway to the ground floor. You proceed down the corridor, and you seem to hear, from inside the manor, still the rustling of the branches outside."
     "Perhaps it is the sound of the floorboards under your weight. Or the wooden furniture, due to the dampness. Maybe there's someone...? Your friends...?"
     "You get a little dizzy, and as you go on, turning on the flashlight of your phone to see clearly, you begin to feel a strong headache gripping you."
-    "You stop when you notice a light coming from one of the rooms. The door is open."
-    
-    scene bg-bedroom with fade
-    $ visited_Bedroom = True
-    
-    "You walk in, observe the room. The bed is diagonal, like it had been moved. On the floor, where the bed was supposed to be, seems to be a trapdoor."
-    "The trapdoor was fastened to the floor by a chain clamped around two metal circles fused with the wooden boards. That chain is now unraveled."
-    "Something inside you is drawn by the curiosity of seeing what's underneath. The other part of you, on the other hand, has the impression that the corners of the walls are shrinking against themselves, that the room is being sucked in by that same trapdoor."
-    "The headache gets worse."
 
-    "It's your choice, but something tells you that if you go down the trapdoor now, you won't be able to come back."
+    if Clue_taken is False:
+        "You explore some of the rooms, but you're not sure what you're looking for, so you decide to go back."
+        "As soon as you exit the corridor, the headache gets weaker."
+        menu:
+            "Library":
+                jump Library
 
-    menu:
-        "Go down":
-            jump Cave
+            "Attic":
+                jump Attic
 
-        "Don't go down":
-            menu:
-                "Attic":
-                    jump Attic
 
-                "Library":
-                    jump Library
+    else:
+        scene bg-corridor with fade
+        $ visited_Corridor = True
+
+        "You know where to go. You're looking for that bedroom, the one that hides a trapdoor."
+
+        scene bg-bedroom with fade
+        $ visited_Bedroom = True
+
+        "After a bit of exploring, you enter this room. The bed is diagonal, like it had been moved. On the floor, where the bed was supposed to be, seems to be a trapdoor."
+        "The trapdoor was fastened to the floor by a chain clamped around two metal circles fused with the wooden boards. That chain is now unraveled."
+        "Something inside you is drawn by the curiosity of seeing what's underneath. The other part of you, on the other hand, has the impression that the corners of the walls are shrinking against themselves, that the room is being sucked in by that same trapdoor."
+        "The headache gets worse."
+
+        "It's your choice, but something tells you that if you go down the trapdoor now, you won't be able to come back."
+
+        menu:
+            "Go down":
+                jump Cave
+
+            "Don't go down":
+                menu:
+                    "Attic":
+                        jump Attic
+
+                    "Library":
+                        jump Library
 
 
 label Cave:
     scene bg-cave with fade
-    
+
+    play sound "Audio - stairs creaking.wav" fadein 2
+    pause 2.0
     "You crouch toward the trapdoor, grab the chain and lift it to open the hole."
     "With an ominous creak, the wooden square lifts up on its pivot, revealing steep stairs that sink into the darkness."
     "You dip your legs into that void, and thanks to the flash of your smartphone you can see where your feet rest."
     "You grab the metal handrail to help you down the stairs, and at one point the soles of your shoes meet the concrete."
     "An almost completely empty basement is what the light from your smartphone reveals. And at the bottom of the basement, another door."
     "The headache is becoming almost unbearable, and your body shivers from the cold."
+    stop music fadeout 2.0
     "There must be something down there, but you can't tell why you think so."
     "You move forward, and after the door you see more stairs, more downhill, this time dug directly into the stone, into ancient damp, mold-covered furrows."
     "You descend in a time that seems infinite, and you have the feeling that the deeper you go into that sort of cave, the more the laws of time and space are dilating."
     "The stairs end. A series of tunnels open before you, dimly lit by a few lanterns."
+
+    play music "Depth of Innsmounth - Intense.mp3" fadein 6.0
+
     "You can hear, at the bottom, voices reciting chants. Your head begins to spin. Somehow, you still manage to keep your balance."
     "You head in the direction of the chants, and the scene that unfolds before you is chilling."
     "People wrapped in hoods stand in a circle before a symbol inscribed on the floor. They have tomes in their hands, from which they read the verses they are reciting."
     "But the thing that makes you shudder is that from that symbol inscribed on the floor there seems to emerge a sinister aura, which, somehow, your body manages to perceive as deeply dangerous and evil."
-    
-    play music "Depth of Innsmounth - Intense.mp3" fadein 2.0
-    
     "And if your gaze doesn't betray you yet, right there in the perimeter of the symbol, tentacles begin to emerge -- from the floor."
     "Quick, try to figure out what you should do."
 
     if Sword_taken is True:
         "You carry that sword you found in the study. You can hit those cultists and stop the ritual."
-    
+
     if Ttka_Halot_taken is True:
         "You carry the book called 'T'tka Halot.' You can use it to join the ritual as well and side with the cultists in creating a new world."
         "Or you can use it to break the ritual and reverse the spell, sucking the cultists inside the summoning symbol."
@@ -314,13 +331,13 @@ label End_Sword:
             jump BadEnding
 
 label End_Sword_uses:
-    
+
     "Quickly, you draw your sword. You're not sure how to use it, but you imagine you can just twirl it in the air and strike someone with it to end the ritual."
     "That's what you do. You throw yourself at one of the cultists and hit him with the sword."
 
     play sound "Audio - blade stroking.wav"
     pause 2.0
-    
+
     "You manage to hit one of them, breaking the chorus. An ominous beam of red light radiates from the portal, and you hear a distant screeching coming from there, what sounds like it belongs to a creature you've never heard before."
     "The tentacles retreat, and slowly that beam of light thins until it disappears."
     "You managed to prevent the ritual, but soon the joy of having saved humanity is replaced by a sharp feeling in your lungs."
@@ -349,10 +366,10 @@ label End_Book_good:
     "Amid the screams of the cultists, the tentacles of the monstrous creature retreat, and slowly that ray of light thins until it disappears."
     "You managed to prevent the ritual. You, your friends, and all humanity are saved."
     "Happy, you walk along the trail of the cavern until you emerge from it. The cavern flows out into the sea, giving you a view of the dark depths beneath your feet."
-    
+
     scene bg-black with fade
     "For now humanity is safe, and you hope it will remain so for a long time to come."
-    
+
     jump RunCredits
 
 label End_Book_bad:
@@ -369,7 +386,7 @@ label End_Book_bad:
 
     scene bg-black with fade
     "Soon you will witness the end of all that you know. And you look forward to it."
-    
+
     jump RunCredits
 
 
@@ -427,19 +444,19 @@ label RunCredits:
         yalign 0.425
     with diss
     pause 2.0
-    
+
     show text "{size=38}{color=#97bfbe}Scripted by {b}Anja Schiffner{/b}{/font}{/color}" as text2:
         xalign 0.5
         yalign 0.5
     with diss
     pause 2.0
-    
+
     show text "{size=38}{color=#97bfbe}Music & Sound Design by {b}David Requena{/b}{/font}{/color}" as text3:
         xalign 0.5
         yalign 0.575
     with diss
     pause 2.0
-    
+
     show text "{size=38}{color=#97bfbe}Images from {b}www.pixabay.com{/b}{/font}{/color}" as text4:
         xalign 0.5
         yalign 0.675
@@ -453,7 +470,7 @@ label RunCredits:
     hide text4
     with diss
     pause 2.0
-    
+
     stop music fadeout 5.5
     show text "{size=38}Thank you for playing ♥{/font}":
     with diss
@@ -461,12 +478,12 @@ label RunCredits:
     hide text
     with diss
     pause 0.5
-    
+
     return
 
 #################################################################################
 ### Test Jumps
-### these are only used to test audio, music or UI 
+### these are only used to test audio, music or UI
 
 label TEST_Audio:
     "Audio - big door opening"
