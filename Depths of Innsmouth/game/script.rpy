@@ -25,7 +25,7 @@ define diss = Dissolve(0.5)
 # Game starts here.
 label start:
 
-    jump RunCredits
+    #jump RunCredits
     stop music fadeout 2
     pause 2.0
 
