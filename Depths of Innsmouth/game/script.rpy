@@ -25,7 +25,7 @@ define diss = Dissolve(0.5)
 # Game starts here.
 label start:
 
-    #jump RunCredits
+    jump RunCredits
     stop music fadeout 2
     pause 2.0
 
@@ -474,7 +474,7 @@ label RunCredits:
     pause 2.0
 
     stop music fadeout 5.5
-    show text "{size=38}Thank you for playing ♥{/font}":
+    show text "{size=38}Thank you for playing {font=arial.ttf}♥{/font}":
     with diss
     pause 5.0
     hide text
@@ -515,6 +515,7 @@ label TEST_Audio:
     "Audio - creepy leaves at night.wav"
     play sound "Audio - creepy leaves at night.wav"
     pause 20.0
+    return
 
 label TEST_Music:
     "Depth of Innsmounth.mp3"
@@ -524,9 +525,11 @@ label TEST_Music:
     "Depth of Innsmounth - Intense.mp3"
     play music "Depth of Innsmounth - Intense.mp3"
     pause 5.0
+    return
 
 label TEST_UI_dialogue:
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    return
 
 label TEST_UI_options:
     "UI test"
@@ -540,3 +543,4 @@ label TEST_UI_options:
         "Faint from headache":
             pause 1.0
     "UI test end"
+    return
